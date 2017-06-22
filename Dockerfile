@@ -3,6 +3,7 @@ FROM ghost:0-alpine
 
 #leave this first as it takes ages
 RUN chown -R node:node /usr/src/ghost/
+RUN apk install sqlite --update
 
 #Do production by default
 ENV NODE_ENV=production
